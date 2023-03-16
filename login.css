@@ -1,0 +1,75 @@
+@import url(index.css);
+
+:root{
+    --login-gradient-point1: #726969;
+    --login-gradient-point2: #ffffff;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--login-gradient-point1), var(--login-gradient-point2));
+}
+
+main{
+    border: 1px solid var(--navbar-bg);
+    padding: 20px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.form-group > input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--newsletter-input-bg);
+    margin-top: 5px;
+}
+
+.button-login{
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    float: right;
+    cursor: pointer;
+
+    background-color: rgb(70, 65, 65);
+    color: #ffffff;
+}
+
+.login-footer{
+    border-top: 1px solid #b9b8b8;
+    padding-top: 5px;
+
+}
+
+.login-footer > span {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.login-footer > span > a{
+    font-size: 1em;
+    color: #383535;
+    text-decoration: underline;
+}
+
+.login-footer > span> a:hover{
+    filter: contrast(80%);
+
+}
