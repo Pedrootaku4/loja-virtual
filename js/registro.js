@@ -30,9 +30,9 @@ function validaFormulario(){
 
 function limpaErro(id){
     var input = document.getElementById(id);
-    var menssage = document.getElementsByClassName(`menssage-error ${id}`)[0];
+    var mensage = document.getElementsByClassName(`mensage-error ${id}`)[0];
     input.classList.remove('inpute-error');
-    menssage.innerHTML = "";
+    mensage.innerHTML = "";
 }
 
 function addLimpaErrorParaInput(input) {
@@ -43,7 +43,7 @@ function addLimpaErrorParaInput(input) {
 
 function setErro(messageClass, input, mensagem = '') {
     var mensagemBox = document.getElementsByClassName(
-        `menssage-error ${messageClass}`
+        `mensage-error ${messageClass}`
         )[0];
         mensagemBox.innerHTML = mensagem;
         input.classList.add('input-error');
