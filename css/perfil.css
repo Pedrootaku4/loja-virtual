@@ -9,7 +9,9 @@ body{
 
 .user-details{
     display: flex;
+    flex-direction: column;
     gap: 10px;
+    min-height: calc(100vh - 3em - 16px);
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -29,7 +31,6 @@ body{
 #editar{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     gap: 20px;
     align-items: center;
 }
@@ -39,16 +40,49 @@ body{
     flex-grow: 1;
 }
 
-#form-endereco{
+#form-endereco,#form-pagamento{
     width: 40vw;
     flex-grow: 1;
     display: none;
+    opacity: 0;
     margin-top: 15px;
+    transition: opacity 8s;
+    
 }
 
-.button{
-    float: none;
-} 
+#endereco-button,
+#pagamento-button{
+    display: none;
+}
+
+.collapse{
+    min-width: 40vw;
+    flex-grow: 1;
+}
+
+label[for=endereco-button],label[for="Pagamento-button"]{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+
+    cursor: pointer;
+    background-color: rgb(70,65,65);
+    color: var(--navbar-color);
+    border-radius: 7px;
+}
+
+label[for=endereco-button]:hover,
+label[for=pagamento-button]:hover
+.collapse-button:checked ~ label[for="endereco-button"],
+.collapse-button:checked ~ label[for="pagamento-button"]{
+    filter: brightness(80%);
+}
+
+.collapse-button:checked ~ #form-endereco, 
+.collapse-button:checked ~ #form-pagamento{
+    display: block;
+}
 
 nav {
     background-color: var(--navbar-bg);

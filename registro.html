@@ -7,26 +7,33 @@
     <title>Casdastre-se | minha loja</title>
     <link rel="stylesheet" href="css/registro.css">
 </head>
+
 <body>
     <main>
         <h1>Cadastre-se agora</h1>
-        <form>
+        <form onsubmit="return validaFormulario()" name="registro">
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" required placeholder="Exemplo" />
+                <span class="menssage-error nome"></span>
             </div>
 
             <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" placeholder="Exemplo@gmail.com"/>
+                <span class="menssage-error email"></span>
             </div>
+
             <div class="form-group">
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" required/>
+                <span class="menssage-error senha"></span>
             </div>
+
             <div class="form-group">
                 <label for="confirme-senha">Repita sua senha:</label>
                 <input type="password" id="confirme-senha" name="confirme-senha" required/>
+                <span class="menssage-error confirme-senha"></span>
             </div>
 
             <button class="button-login">Cadastrar <i class="fa fa-floppy-o"></i></button>
@@ -35,6 +42,6 @@
             <span>Já possue uma conta? <a href="login.html">Faça login</a></span>
         </div>
     </main>
-    
+     <script type="text/javascript" src="js/registro.js"></script>
 </body>
 </html>

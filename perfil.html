@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="icon" href="imgs/favicon.ico" />
     <link rel="stylesheet" href="css/perfil.css" />
 </head>
+
 <body>
     <nav>
         <h1>Minha Loja</h1>
@@ -15,15 +17,15 @@
             <a href="perfil.html">
                 <i class="fa fa-user"></i>
                 <span>Perfil</span>
-                </a>
-                <a href="#">
-                    <i class="fa fa-heart"></i>
-                    <span>Favoritos</span>
-                </a>
-                <a href="checkout.html">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span>Carrinho</span>
-                </a>
+            </a>
+            <a href="#">
+                <i class="fa fa-heart"></i>
+                <span>Favoritos</span>
+            </a>
+            <a href="checkout.html">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Carrinho</span>
+            </a>
         </div>
     </nav>
     <section class="user-details">
@@ -46,39 +48,83 @@
                 <button class="button-login">Salvar <i class="fa fa-floppy-o"></i></button>
             </form>
             <div class="collapse">
-                <button class="button collapse-button" type="button">Endereço</button>
-            <form id="form-endereco">
-                <div class="form-group">
-                    <label for="rua">rua</label>
-                    <input type="text" name="rua" id="rua" />
-                </div>
 
-                <div class="form-group">
-                    <label for="numero">Numero</label>
-                    <input type="text" name="numero" id="numero" />
-                </div>
+                <input type="checkbox" class="collapse-button" id="endereco-button" />
+                <label for="endereco-button">
+                    Endereço
+                    <i class="fa fa-chevron-down"></i>
+                </label>
+                <form id="form-endereco">
+                    <div class="form-group">
+                        <label for="rua">rua</label>
+                        <input type="text" name="rua" id="rua" />
+                    </div>
 
-                <div class="form-group">
-                    <label for="cep">CEP</label>
-                    <input type="text" name="cep" id="cep" />
-                </div>
+                    <div class="form-group">
+                        <label for="numero">Numero</label>
+                        <input type="text" name="numero" id="numero" />
+                    </div>
 
-                <div class="form-group">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" name="bairro" id="bairro" />
-                </div>
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" name="cep" id="cep" />
+                    </div>
 
-                <div class="form-group">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" />
-                </div>
+                    <div class="form-group">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" />
+                    </div>
 
-                <div class="form-group">
-                    <label for="estado">Estado</label>
-                    <input type="text" name="estado" id="estado" />
-                </div>
-            </form>
-        </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input type="text" name="estado" id="estado" />
+                    </div>
+                </form>
+                <button class="button-login">Salvar
+                     <i class="fa fa-floppy-o"></i>
+                </button>
+            </div>
+            <div class="collapse">
+                <input type="checkbox" class="collapse-button" id="pagamento-button"/>
+                <label for="pagamento-button">
+                    Dados de pagamento
+                    <i class="fa fa-chevron-down"></i>
+                </label>
+                <form action="" id="form-pagemento">
+                    <div class="form-group">
+                        <label for="cpf">CPF:</label>
+                        <inputl type="text" name="cpf" id="cpf" />
+                    </div>
+                    <div class="form-group">
+                        <label for="nome-cartao">Nome do cartao</label>
+                        <input type="text" name="nome-cartao" id="nome-cartao"/>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="cartao-numero">Número impresso no cartao</label>
+                        <input type="number" name="cartao-numero" id="cartao-numero"/>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="number" name="cvv" id="cvv">
+                    </div>
+                    <div class="form-group">
+                        <label for="validade-cartao">Validade</label>
+                        <input type="number" name="validade-cartao" id="validade-cartao" >
+                    </div>
+
+                    <button class="button-login">Salvar
+                        <i class="fa fa-floppy-o"></i>
+                   </button> 
+
+                </form>
+            </div>
         </main>
     </section>
     <footer>
@@ -87,4 +133,5 @@
         </p>
     </footer>
 </body>
+
 </html>
