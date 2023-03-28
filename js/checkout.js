@@ -49,14 +49,33 @@ function renderItem(item){
 
     container.appendChild(divItem);
 }
+function calculaFrete(){
+    return 10.98
+}
 
 function main(){
     const itens = buscaItens();
-    const linkItens = document.querySelector("a[href='#items']")
+    const frete = calculaFrete();
+
+    const linkItens = document.querySelector("a[href='#items']");
+    const itensTotal = document.getElementById('itens-total');
+    const totalPedido = document.getElementById('pedido-total');
+    const freteTotal = document.getElementById('frete-total');
+    
+    const formataDinheiro = new Intl.NumberFormat('pt-br',{style: 'currency', currency:'BRL'})
+    
     const quantidadeItens = itens.reduce(function(valorAnterior, item){
         return valorAnterior + item.quantidade;
     },0);
-    linkItens.innerHTML = `${quantidadeItens} ${(quantidadeItens === 1 ? "Item" : "Item(s)")}`;
+
+    const subtotalItens = itens.reduce(function(valorAnterior, item){
+        return valorAnterior + (item.quantidade * item.preco);
+    },0);
+
+    totalPedido.innerHTML = formataDinheiro.format(frete + subtotalItens);
+    freteTotal.innerHTML = formataDinheiro.format(frete);
+    itensTotal.innerHTML = formataDinheiro.format(subtotalItens);
+    linkItens.innerHTML = `${quantidadeItens} ${(quantidadeItens === 1 ? "Item" : "Items")}`;
 
     for(var item of itens){
         renderItem(item);

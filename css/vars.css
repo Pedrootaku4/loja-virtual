@@ -17,6 +17,15 @@
     --button-add-cart: #428bff;
     --newsletter-input-bg: #e3e3e3;
     --placeholder-color: #000;
+    --color-point-1: #161aff;
+    --color-point-2: #6c89fe;
+    --cinza-1: #e6e5e5;
+    --cinza-2: #adadad;
+    --checkout-link-color: #41c6ff;
+    --verde-1: #a5ff27;
+    --produto-color: #c3c3c3;
+    --login-gradient-point1: #726969;
+    --login-gradient-point2: #fff;
 }
 
 * {
