@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/perfil.css" />
 </head>
 
-<body>
+<body onload="main()">
     <nav>
         <h1>Minha Loja</h1>
         <div class="user-menu">
@@ -47,6 +47,7 @@
                 </div>
                 <button class="button-login">Salvar <i class="fa fa-floppy-o"></i></button>
             </form>
+
             <div class="collapse">
 
                 <input type="checkbox" class="collapse-button" id="endereco-button" />
@@ -55,6 +56,12 @@
                     <i class="fa fa-chevron-down"></i>
                 </label>
                 <form id="form-endereco">
+
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" name="cep" id="cep" />
+                    </div>
+
                     <div class="form-group">
                         <label for="rua">rua</label>
                         <input type="text" name="rua" id="rua" />
@@ -65,10 +72,6 @@
                         <input type="text" name="numero" id="numero" />
                     </div>
 
-                    <div class="form-group">
-                        <label for="cep">CEP</label>
-                        <input type="text" name="cep" id="cep" />
-                    </div>
 
                     <div class="form-group">
                         <label for="bairro">Bairro</label>
@@ -84,18 +87,20 @@
                         <label for="estado">Estado</label>
                         <input type="text" name="estado" id="estado" />
                     </div>
+                 <button class="button-login">Salvar
+                        <i class="fa fa-floppy-o"></i>
+                   </button>
                 </form>
-                <button class="button-login">Salvar
-                     <i class="fa fa-floppy-o"></i>
-                </button>
+        
             </div>
+
             <div class="collapse">
                 <input type="checkbox" class="collapse-button" id="pagamento-button"/>
                 <label for="pagamento-button">
                     Dados de pagamento
                     <i class="fa fa-chevron-down"></i>
                 </label>
-                <form action="" id="form-pagemento">
+                <form action="" id="form-pagamento">
                     <div class="form-group">
                         <label for="cpf">CPF:</label>
                         <inputl type="text" name="cpf" id="cpf" />
@@ -128,10 +133,11 @@
         </main>
     </section>
     <footer>
-        <p>
+        <p>r
             &copy; Minha Loja - Todos os Direitos Reservados
         </p>
     </footer>
+    <script type="text/javascript" src="js/perfil.js"></script>
 </body>
 
 </html>
